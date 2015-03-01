@@ -17,10 +17,20 @@ module.exports = function(app) {
 
 	});
 
+	app.get('/hi', function (req, res) {
+		
+		res.json({message : 'Hii '});
+
+	});
+	
 	app.get('*', function(req, res) {
 
 		res.sendfile('./public/views/index.html');
 
 	});
+
+	// Routes 
+
+
 
 };	
